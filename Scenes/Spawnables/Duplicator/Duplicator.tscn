@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://ba2tkcvat420p"]
+
+[ext_resource type="Script" uid="uid://c2v8p8238gmcg" path="res://Scenes/Spawnables/Duplicator/duplicator.gd" id="1_25icg"]
+[ext_resource type="Texture2D" uid="uid://bnid268jm5rbe" path="res://Assets/Textures/grid.png" id="2_a76af"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_vs11d"]
+albedo_texture = ExtResource("2_a76af")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_duvtd"]
+size = Vector3(2.0922852, 2.4494324, 0.13104248)
+
+[node name="Duplicator" type="StaticBody3D"]
+script = ExtResource("1_25icg")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.17434168, -0.5547228, 0)
+use_collision = true
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1399231, 0.5008039, -0.016723633)
+size = Vector3(2.6384888, 2.9882813, 0.39526367)
+material = SubResource("StandardMaterial3D_vs11d")
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15276909, 0.5147199, 0.010803223)
+operation = 2
+size = Vector3(2.1061897, 2.4760742, 1.0216064)
+
+[node name="Area3D" type="Area3D" parent="."]
+collision_layer = 0
+collision_mask = 5
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0076024383, -0.056714654, 0.0035267472)
+shape = SubResource("BoxShape3D_duvtd")

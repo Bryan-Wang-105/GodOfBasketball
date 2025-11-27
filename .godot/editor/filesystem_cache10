@@ -1,0 +1,53 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1764238610
+::res://Assets/::1764237039
+::res://Assets/Textures/::1764237050
+Court.jpg::CompressedTexture2D::1914747939482460899::1764236930::1764237045::1::::<><><>0<>0<>b8574cbed20906c9cd20f685170e467a<>res://.godot/imported/Court.jpg-d23111779106b8f8cddd99ea5f871662.s3tc.ctex::
+grid.png::CompressedTexture2D::3315622720062285690::1764198300::1764237050::1::::<><><>0<>0<>0234d74a2f56aa236bcf3683eb19118b<>res://.godot/imported/grid.png-103f430ad21f66a217f51a7dc6be2299.s3tc.ctex::
+::res://Scenes/::1764237550
+::res://Scenes/Ball/::1764238611
+bball2.gltf::PackedScene::7899039199352519487::1764219968::1764219970::1::::<><><>0<>0<>e6d094925391877e02f06bbbe1f29606<>res://.godot/imported/bball2.gltf-5a58028c6291dc36f55b5a3b19ecf762.scn::uid://c28gb67dnkg2e::::res://Scenes/Ball/bball2_0.png
+bball2_0.png::CompressedTexture2D::6736432377059228082::1764219970::1764219970::1::::<><><>0<>0<>2c9c9bccf8431101d7c006be6519125c<>res://.godot/imported/bball2_0.png-7e47586f5bdb0d025dd5300813087158.s3tc.ctex::
+bball.gltf::PackedScene::3978312208615352681::1764216364::1764216366::1::::<><><>0<>0<>35336ad67aba911acf5317987b07732d<>res://.godot/imported/bball.gltf-69f3b16dfc440e6594903e68e34be773.scn::uid://cta757bh1g4b1::::res://Scenes/Ball/bball_0.png
+bball_0.png::CompressedTexture2D::6108427596739562272::1764216307::1764216365::1::::<><><>0<>0<>d9643b8520198769e3d2713257f57555<>res://.godot/imported/bball_0.png-9ca52eb9621343dcbedeadecba3c4779.s3tc.ctex::
+b_ball.gd::GDScript::228805204139019010::1764222936::0::1::::<>RigidBody3D<><>0<>0<><>::
+b_ball.tscn::PackedScene::3243093436241369024::1764238611::0::1::::<><><>0<>0<><>::uid://di3ng4c74oog::::res://Scenes/Ball/b_ball.gd<>uid://bwxehrj1yes1n::::res://Scenes/Ball/bball.gltf
+::res://Scenes/Coach/::1764237565
+coach.gltf::PackedScene::322712129641676254::1764230219::1764230223::1::::<><><>0<>0<>782913b3780f030434837cc297cd530d<>res://.godot/imported/coach.gltf-f4b38b41971d4a6ecda72b248c08ef00.scn::uid://cjkw78dxoevi5::::res://Scenes/Coach/coach_0.png
+coach.png::CompressedTexture2D::5193177766617666153::1764237238::1764237565::1::::<><><>0<>0<>f131e963ff777ff29161f8ce03ee6361<>res://.godot/imported/coach.png-503a1640916a424c5bd1dc00650a65b1.ctex::
+coach.tscn::PackedScene::2557833686559762607::1764232600::0::1::::<><><>0<>0<><>::uid://eula0aadeah7::::res://Scenes/Coach/coach.gltf
+coach_0.png::CompressedTexture2D::5426579395883783458::1764230222::1764230244::1::::<><><>0<>0<>3c06911043fc3824926f3402ac559aaa<>res://.godot/imported/coach_0.png-93914e3ae4dc5b902d7432d15da070bb.ctex::
+::res://Scenes/Environments/::1764238765
+court.tscn::PackedScene::1138339759135322802::1764238765::0::1::::<><><>0<>0<><>::uid://bnid268jm5rbe::::res://Assets/Textures/grid.png<>uid://bverbxx3mh07u::::res://Scenes/Goal/goalMesh.tscn<>uid://b7nca5m4m4k4d::::res://Scripts/GymControls/roof_control.gd<>uid://8j2r6v1f3lvb::::res://Scripts/GymControls/ball_reset.gd<>uid://bcpbfacfap4e2::::res://Scenes/Coach/coach.tscn
+root.tscn::PackedScene::6208804136801157576::1764237101::0::1::::<><><>0<>0<><>::uid://cyn415x7dblc2::::res://Scenes/Environments/world.tscn
+sandbox.tscn::PackedScene::9182028219851104995::1764237050::0::1::::<><><>0<>0<><>::uid://bnid268jm5rbe::::res://Assets/Textures/grid.png
+world.tscn::PackedScene::6486019361622511747::1764238687::0::1::::<><><>0<>0<><>::uid://bmg8jl8p8bocm::::res://Scenes/Ball/b_ball.tscn<>uid://qhoj3xjipgb7::::res://Scenes/Environments/court.tscn<>uid://ja13r6fvdujc::::res://Scenes/Player/player.tscn<>uid://bgxtx1qndrtqy::::res://Scenes/Player/HUD.gd<>uid://bowc0gmynfbn7::::res://Scenes/Spawnables/Lift/Lift.tscn
+::res://Scenes/Goal/::1764235998
+bball rim.gltf::PackedScene::2760623947943685251::1764215628::1764215637::1::::<><><>0<>0<>89fe1fb068149cdd2b27722a5a4158e8<>res://.godot/imported/bball rim.gltf-100bc58eec7d4138221afa985d9ac734.scn::uid://dbm4204t5v33f::::res://Scenes/Goal/bball rim_0.png<>uid://dkse0g63aea1b::::res://Scenes/Goal/bball rim_1.png<>uid://bd766ipmyo0w3::::res://Scenes/Goal/bball rim_2.png
+bball rim_0.png::CompressedTexture2D::7256033795779016021::1764215637::1764216075::1::::<><><>0<>0<>0da19d450eb6dafb0914b6fb1f6b7e9b<>res://.godot/imported/bball rim_0.png-4bc8eae615c0d76f1b9a619f936b30d3.ctex::
+bball rim_1.png::CompressedTexture2D::7898597164152778965::1764215637::1764215699::1::::<><><>0<>0<>3508e3095fae8181fee6c0d6b84ff53b<>res://.godot/imported/bball rim_1.png-416ca119ca1f10821e4cbfa375462a21.ctex::
+bball rim_2.png::CompressedTexture2D::2664985333060667676::1764215637::1764215703::1::::<><><>0<>0<>94ce0ed5f8cd404dc8a536ddd832ee27<>res://.godot/imported/bball rim_2.png-59b1e0922ca1793524003bbe4ed7e68e.ctex::
+goalMesh.tscn::PackedScene::3869679130635042928::1764235998::0::1::::<><><>0<>0<><>::uid://dbm4204t5v33f::::res://Scenes/Goal/bball rim_0.png<>uid://c24ufjdmdjx42::::res://Scenes/Goal/goal_mesh.gd<>uid://dkse0g63aea1b::::res://Scenes/Goal/bball rim_1.png<>uid://bd766ipmyo0w3::::res://Scenes/Goal/bball rim_2.png<>uid://5qukif7mm30o::::res://Scenes/Goal/net.png
+goal_mesh.gd::GDScript::6729030847199843721::1764235963::0::1::::<>RigidBody3D<><>0<>0<><>::
+net.png::CompressedTexture2D::2139927980381603888::1764217992::1764217992::1::::<><><>0<>0<>201b7e242c3bff76a220e63e760f1021<>res://.godot/imported/net.png-608125c58b43ccb8867cd5c0ee6154b7.s3tc.ctex::
+::res://Scenes/Player/::1764237119
+HUD.gd::GDScript::2856230520906380252::1764233878::0::1::::<>Control<><>0<>0<><>::
+player.gd::GDScript::838552904273326651::1764232151::0::1::::<>CharacterBody3D<><>0<>0<><>::
+player.tscn::PackedScene::633329177824827468::1764237072::0::1::::<><><>0<>0<><>::uid://l7g3xpqcjh1d::::res://Scenes/Player/player.gd<>uid://ch8cf86ydleay::::res://Scenes/Player/raycast.gd
+raycast.gd::GDScript::5332419883945846640::1764232054::0::1::::<>RayCast3D<><>0<>0<><>::
+::res://Scenes/Spawnables/::1764237561
+::res://Scenes/Spawnables/BlackHole/::1764237559
+::res://Scenes/Spawnables/Duplicator/::0
+::res://Scenes/Spawnables/Lift/::1764238907
+GravLift.gltf::PackedScene::562855797283785128::1764237564::1764237565::1::::<><><>0<>0<>e48d067a90e578f27b1834a2e13dd3de<>res://.godot/imported/GravLift.gltf-5855b83dbd17dc3af26c881d835a1685.scn::uid://bc4x4ggij7lqy::::res://Scenes/Spawnables/Lift/GravLift_0.png
+GravLift_0.png::CompressedTexture2D::2588113929479478772::1764237565::1764237599::1::::<><><>0<>0<>7011cdbb35ab3e5fd7dd1b0743442ff9<>res://.godot/imported/GravLift_0.png-69bd105c597e54a070da9f25315d2e9f.ctex::
+lift.png::CompressedTexture2D::1318053148126211119::1764238907::1764239144::1::::<><><>0<>0<>f7fde8d77d9f927a13155046fb03885d<>res://.godot/imported/lift.png-b7b900e1c9552ef6de6726da1c2956aa.ctex::
+Lift.tscn::PackedScene::3414647218833799382::1764238452::0::1::::<><><>0<>0<><>::uid://bc4x4ggij7lqy::::res://Scenes/Spawnables/Lift/GravLift_0.png<>uid://6gnx05lny0h3::::res://Scenes/Spawnables/Lift/lift.gd
+lift.gd::GDScript::2189072173415159774::1764238429::0::1::::<>StaticBody3D<><>0<>0<><>::
+Duplicator.tscn::PackedScene::2443330501368482085::1764239305::0::1::::<><><>0<>0<><>::uid://bnid268jm5rbe::::res://Assets/Textures/grid.png
+duplicator.gd::GDScript::6713324302415013242::1764239311::0::1::::<>StaticBody3D<><>0<>0<><>::
+::res://Scripts/::1764237116
+global.gd::GDScript::2381307648802979687::1764231608::0::1::::<>Node<><>0<>0<><>::
+::res://Scripts/GymControls/::1764237086
+ball_reset.gd::GDScript::2336482618996548263::1764223651::0::1::::<>CSGBox3D<><>0<>0<><>::
+roof_control.gd::GDScript::4659423620471420365::1764222528::0::1::::<>CSGBox3D<><>0<>0<><>::

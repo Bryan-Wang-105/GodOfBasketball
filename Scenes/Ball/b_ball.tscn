@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmg8jl8p8bocm"]
+
+[ext_resource type="Script" uid="uid://di3ng4c74oog" path="res://Scenes/Ball/b_ball.gd" id="1_ex40v"]
+[ext_resource type="PackedScene" uid="uid://bwxehrj1yes1n" path="res://Scenes/Ball/bball.gltf" id="1_nagx5"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ex40v"]
+bounce = 0.7
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_j705u"]
+
+[node name="BBall" type="RigidBody3D" groups=["ball", "physics"]]
+collision_layer = 20
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_ex40v")
+continuous_cd = true
+script = ExtResource("1_ex40v")
+
+[node name="blockbench_export" parent="." instance=ExtResource("1_nagx5")]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.9, 0, 0, 0, 0.9, 0, 0, 0, 0.9, 0, 0, 0)
+shape = SubResource("SphereShape3D_j705u")
