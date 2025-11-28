@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcpbfacfap4e2"]
+
+[ext_resource type="PackedScene" uid="uid://eula0aadeah7" path="res://Decor/Coach/coach.gltf" id="1_m7csp"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_m7csp"]
+height = 2.3442383
+
+[node name="Coach" type="StaticBody3D"]
+metadata/_edit_lock_ = true
+
+[node name="blockbench_export" parent="." instance=ExtResource("1_m7csp")]
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.003823042, 0, 0.08533013)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.1443813, 0)
+shape = SubResource("CapsuleShape3D_m7csp")

@@ -1,0 +1,1333 @@
+[gd_scene load_steps=14 format=3 uid="uid://cp4xhnia4k1i"]
+
+[ext_resource type="PackedScene" uid="uid://bruqa2uhxmuej" path="res://PlayerTools/Plane/Airplane.fbx" id="1_aji54"]
+[ext_resource type="Script" uid="uid://cme5dyd76vxi" path="res://PlayerTools/Plane/plane.gd" id="1_ey00o"]
+[ext_resource type="PackedScene" uid="uid://bmg8jl8p8bocm" path="res://PlayerTools/Ball/b_ball.tscn" id="2_ep08x"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_c3gnd"]
+radius = 1.7333984
+height = 27.509155
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2y4rl"]
+size = Vector3(29.635757, 9.297363, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ia1a4"]
+size = Vector3(14.487675, 3.7301025, 1)
+
+[sub_resource type="Animation" id="Animation_ia1a4"]
+resource_name = "OpenDoors"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-0.7484131, -4.0273523, 3.970048), Vector3(-2.0867012, -4.3286953, 3.970048)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Door1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, -2.277777)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Door2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0.6682472, -4.0273523, 3.970048), Vector3(1.7487755, -4.4215474, 3.970048)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Door2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 2.193687)]
+}
+
+[sub_resource type="Animation" id="Animation_ep08x"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Door1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-0.7484131, -4.0273523, 3.970048)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Door1:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Door2:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.6682472, -4.0273523, 3.970048)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Door2:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ey00o"]
+_data = {
+&"OpenDoors": SubResource("Animation_ia1a4"),
+&"RESET": SubResource("Animation_ep08x")
+}
+
+[sub_resource type="Animation" id="Animation_ey00o"]
+resource_name = "BayDoors"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BombCam:current")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BombCam:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.018634498, -5.8082023, -9.328459)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BombCam:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3.1415925, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_r4slc"]
+resource_name = "StraightDown"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BombCam:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.018634498, -4.2382417, 3.243743)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BombCam:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-1.7784204, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BombCam:current")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="Animation" id="Animation_wnqbg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BombCam:current")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BombCam:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0.018634498, -5.8082023, -9.328459)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BombCam:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(-3.1415925, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_r4slc"]
+_data = {
+&"BayDoors": SubResource("Animation_ey00o"),
+&"RESET": SubResource("Animation_wnqbg"),
+&"StraightDown": SubResource("Animation_r4slc")
+}
+
+[node name="Plane" type="CharacterBody3D"]
+script = ExtResource("1_ey00o")
+
+[node name="SpringArm3D" type="SpringArm3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.9108458, 0)
+spring_length = 20.0
+
+[node name="CamPos" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 14.704897, 46.218414)
+
+[node name="BombCam" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.99999994, 1.5099579e-07, 0, -1.5099579e-07, -0.99999994, 0.018634498, -5.8082023, -9.328459)
+
+[node name="Airplane" parent="." instance=ExtResource("1_aji54")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0.012599707, -4.501997, 0.14838958)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.00030112267, -0.8346677, 3.2461858)
+shape = SubResource("CapsuleShape3D_c3gnd")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.100055456, -0.8346678, 3.2410588)
+shape = SubResource("BoxShape3D_2y4rl")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.7131517, -0.8346678, 14.990242)
+shape = SubResource("BoxShape3D_ia1a4")
+
+[node name="CSGCombiner3D" type="CSGCombiner3D" parent="."]
+use_collision = true
+collision_layer = 512
+collision_mask = 0
+
+[node name="CSGBox3D" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1131134, -2.7971475, 3.94635)
+size = Vector3(3.5925598, 2.1513672, 22.13733)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="CSGCombiner3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.140836, -2.9826944, 4.0289917)
+operation = 2
+size = Vector3(3.4204478, 1.7802734, 21.412964)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_ey00o")
+}
+
+[node name="CamPositions" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_r4slc")
+}
+
+[node name="Door1" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.7484131, -4.0273523, 3.970048)
+size = Vector3(1.4445801, 0.34851074, 22.02417)
+
+[node name="Door2" type="CSGBox3D" parent="."]
+transform = Transform3D(0.9999998, 0, 0, 0, 0.9999998, 0, 0, 0, 1, 0.6682472, -4.0273523, 3.970048)
+size = Vector3(1.2937012, 0.34851074, 21.90564)
+
+[node name="BBall" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 14.185465)
+freeze = true
+
+[node name="BBall2" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 14.185465)
+freeze = true
+
+[node name="BBall3" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 14.185465)
+freeze = true
+
+[node name="BBall4" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 14.185465)
+freeze = true
+
+[node name="BBall5" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 14.185465)
+freeze = true
+
+[node name="BBall6" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 14.185465)
+freeze = true
+
+[node name="BBall7" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 14.185465)
+freeze = true
+
+[node name="BBall8" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 14.185465)
+freeze = true
+
+[node name="BBall9" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 13.604155)
+freeze = true
+
+[node name="BBall10" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 13.604155)
+freeze = true
+
+[node name="BBall11" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 13.604155)
+freeze = true
+
+[node name="BBall12" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 13.604155)
+freeze = true
+
+[node name="BBall13" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 13.604155)
+freeze = true
+
+[node name="BBall14" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 13.604155)
+freeze = true
+
+[node name="BBall15" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 13.604155)
+freeze = true
+
+[node name="BBall16" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 13.604155)
+freeze = true
+
+[node name="BBall17" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 12.864147)
+freeze = true
+
+[node name="BBall18" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 12.864147)
+freeze = true
+
+[node name="BBall19" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 12.864147)
+freeze = true
+
+[node name="BBall20" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 12.864147)
+freeze = true
+
+[node name="BBall21" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 12.864147)
+freeze = true
+
+[node name="BBall22" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 12.864147)
+freeze = true
+
+[node name="BBall23" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 12.864147)
+freeze = true
+
+[node name="BBall24" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 12.864147)
+freeze = true
+
+[node name="BBall25" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 12.282837)
+freeze = true
+
+[node name="BBall26" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 12.282837)
+freeze = true
+
+[node name="BBall27" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 12.282837)
+freeze = true
+
+[node name="BBall28" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 12.282837)
+freeze = true
+
+[node name="BBall29" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 12.282837)
+freeze = true
+
+[node name="BBall30" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 12.282837)
+freeze = true
+
+[node name="BBall31" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 12.282837)
+freeze = true
+
+[node name="BBall32" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 12.282837)
+freeze = true
+
+[node name="BBall33" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 11.649364)
+freeze = true
+
+[node name="BBall34" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 11.649364)
+freeze = true
+
+[node name="BBall35" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 11.649364)
+freeze = true
+
+[node name="BBall36" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 11.649364)
+freeze = true
+
+[node name="BBall37" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 11.649364)
+freeze = true
+
+[node name="BBall38" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 11.649364)
+freeze = true
+
+[node name="BBall39" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 11.649364)
+freeze = true
+
+[node name="BBall40" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 11.649364)
+freeze = true
+
+[node name="BBall41" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 11.068054)
+freeze = true
+
+[node name="BBall42" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 11.068054)
+freeze = true
+
+[node name="BBall43" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 11.068054)
+freeze = true
+
+[node name="BBall44" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 11.068054)
+freeze = true
+
+[node name="BBall45" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 11.068054)
+freeze = true
+
+[node name="BBall46" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 11.068054)
+freeze = true
+
+[node name="BBall47" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 11.068054)
+freeze = true
+
+[node name="BBall48" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 11.068054)
+freeze = true
+
+[node name="BBall49" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 10.301997)
+freeze = true
+
+[node name="BBall50" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 10.301997)
+freeze = true
+
+[node name="BBall51" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 10.301997)
+freeze = true
+
+[node name="BBall52" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 10.301997)
+freeze = true
+
+[node name="BBall53" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 10.301997)
+freeze = true
+
+[node name="BBall54" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 10.301997)
+freeze = true
+
+[node name="BBall55" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 10.301997)
+freeze = true
+
+[node name="BBall56" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 10.301997)
+freeze = true
+
+[node name="BBall57" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 9.720687)
+freeze = true
+
+[node name="BBall58" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 9.720687)
+freeze = true
+
+[node name="BBall59" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 9.720687)
+freeze = true
+
+[node name="BBall60" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 9.720687)
+freeze = true
+
+[node name="BBall61" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 9.720687)
+freeze = true
+
+[node name="BBall62" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 9.720687)
+freeze = true
+
+[node name="BBall63" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 9.720687)
+freeze = true
+
+[node name="BBall64" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 9.720687)
+freeze = true
+
+[node name="BBall65" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 8.835706)
+freeze = true
+
+[node name="BBall66" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 8.835706)
+freeze = true
+
+[node name="BBall67" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 8.835706)
+freeze = true
+
+[node name="BBall68" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 8.835706)
+freeze = true
+
+[node name="BBall69" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 8.835706)
+freeze = true
+
+[node name="BBall70" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 8.835706)
+freeze = true
+
+[node name="BBall71" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 8.835706)
+freeze = true
+
+[node name="BBall72" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 8.835706)
+freeze = true
+
+[node name="BBall73" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 8.2543955)
+freeze = true
+
+[node name="BBall74" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 8.2543955)
+freeze = true
+
+[node name="BBall75" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 8.2543955)
+freeze = true
+
+[node name="BBall76" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 8.2543955)
+freeze = true
+
+[node name="BBall77" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 8.2543955)
+freeze = true
+
+[node name="BBall78" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 8.2543955)
+freeze = true
+
+[node name="BBall79" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 8.2543955)
+freeze = true
+
+[node name="BBall80" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 8.2543955)
+freeze = true
+
+[node name="BBall81" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 7.491388)
+freeze = true
+
+[node name="BBall82" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 7.491388)
+freeze = true
+
+[node name="BBall83" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 7.491388)
+freeze = true
+
+[node name="BBall84" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 7.491388)
+freeze = true
+
+[node name="BBall85" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 7.491388)
+freeze = true
+
+[node name="BBall86" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 7.491388)
+freeze = true
+
+[node name="BBall87" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 7.491388)
+freeze = true
+
+[node name="BBall88" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 7.491388)
+freeze = true
+
+[node name="BBall89" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 6.9100776)
+freeze = true
+
+[node name="BBall90" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 6.9100776)
+freeze = true
+
+[node name="BBall91" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 6.9100776)
+freeze = true
+
+[node name="BBall92" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 6.9100776)
+freeze = true
+
+[node name="BBall93" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 6.9100776)
+freeze = true
+
+[node name="BBall94" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 6.9100776)
+freeze = true
+
+[node name="BBall95" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 6.9100776)
+freeze = true
+
+[node name="BBall96" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 6.9100776)
+freeze = true
+
+[node name="BBall97" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 6.2317095)
+freeze = true
+
+[node name="BBall98" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 6.2317095)
+freeze = true
+
+[node name="BBall99" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 6.2317095)
+freeze = true
+
+[node name="BBall100" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 6.2317095)
+freeze = true
+
+[node name="BBall101" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 6.2317095)
+freeze = true
+
+[node name="BBall102" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 6.2317095)
+freeze = true
+
+[node name="BBall103" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 6.2317095)
+freeze = true
+
+[node name="BBall104" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 6.2317095)
+freeze = true
+
+[node name="BBall105" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 5.650399)
+freeze = true
+
+[node name="BBall106" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 5.650399)
+freeze = true
+
+[node name="BBall107" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 5.650399)
+freeze = true
+
+[node name="BBall108" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 5.650399)
+freeze = true
+
+[node name="BBall109" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 5.650399)
+freeze = true
+
+[node name="BBall110" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 5.650399)
+freeze = true
+
+[node name="BBall111" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 5.650399)
+freeze = true
+
+[node name="BBall112" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 5.650399)
+freeze = true
+
+[node name="BBall113" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 4.8775287)
+freeze = true
+
+[node name="BBall114" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 4.8775287)
+freeze = true
+
+[node name="BBall115" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 4.8775287)
+freeze = true
+
+[node name="BBall116" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 4.8775287)
+freeze = true
+
+[node name="BBall117" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 4.8775287)
+freeze = true
+
+[node name="BBall118" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 4.8775287)
+freeze = true
+
+[node name="BBall119" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 4.8775287)
+freeze = true
+
+[node name="BBall120" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 4.8775287)
+freeze = true
+
+[node name="BBall121" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 4.2962184)
+freeze = true
+
+[node name="BBall122" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 4.2962184)
+freeze = true
+
+[node name="BBall123" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 4.2962184)
+freeze = true
+
+[node name="BBall124" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 4.2962184)
+freeze = true
+
+[node name="BBall125" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 4.2962184)
+freeze = true
+
+[node name="BBall126" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 4.2962184)
+freeze = true
+
+[node name="BBall127" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 4.2962184)
+freeze = true
+
+[node name="BBall128" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 4.2962184)
+freeze = true
+
+[node name="BBall129" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 3.5364788)
+freeze = true
+
+[node name="BBall130" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 3.5364788)
+freeze = true
+
+[node name="BBall131" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 3.5364788)
+freeze = true
+
+[node name="BBall132" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 3.5364788)
+freeze = true
+
+[node name="BBall133" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 3.5364788)
+freeze = true
+
+[node name="BBall134" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 3.5364788)
+freeze = true
+
+[node name="BBall135" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 3.5364788)
+freeze = true
+
+[node name="BBall136" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 3.5364788)
+freeze = true
+
+[node name="BBall137" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 2.9551685)
+freeze = true
+
+[node name="BBall138" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 2.9551685)
+freeze = true
+
+[node name="BBall139" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 2.9551685)
+freeze = true
+
+[node name="BBall140" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 2.9551685)
+freeze = true
+
+[node name="BBall141" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 2.9551685)
+freeze = true
+
+[node name="BBall142" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 2.9551685)
+freeze = true
+
+[node name="BBall143" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 2.9551685)
+freeze = true
+
+[node name="BBall144" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 2.9551685)
+freeze = true
+
+[node name="BBall145" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 2.0942988)
+freeze = true
+
+[node name="BBall146" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 2.0942988)
+freeze = true
+
+[node name="BBall147" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 2.0942988)
+freeze = true
+
+[node name="BBall148" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 2.0942988)
+freeze = true
+
+[node name="BBall149" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 2.0942988)
+freeze = true
+
+[node name="BBall150" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 2.0942988)
+freeze = true
+
+[node name="BBall151" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 2.0942988)
+freeze = true
+
+[node name="BBall152" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 2.0942988)
+freeze = true
+
+[node name="BBall153" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 1.5129886)
+freeze = true
+
+[node name="BBall154" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 1.5129886)
+freeze = true
+
+[node name="BBall155" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 1.5129886)
+freeze = true
+
+[node name="BBall156" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 1.5129886)
+freeze = true
+
+[node name="BBall157" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 1.5129886)
+freeze = true
+
+[node name="BBall158" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 1.5129886)
+freeze = true
+
+[node name="BBall159" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 1.5129886)
+freeze = true
+
+[node name="BBall160" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 1.5129886)
+freeze = true
+
+[node name="BBall161" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 0.77392435)
+freeze = true
+
+[node name="BBall162" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 0.77392435)
+freeze = true
+
+[node name="BBall163" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 0.77392435)
+freeze = true
+
+[node name="BBall164" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 0.77392435)
+freeze = true
+
+[node name="BBall165" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 0.77392435)
+freeze = true
+
+[node name="BBall166" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 0.77392435)
+freeze = true
+
+[node name="BBall167" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 0.77392435)
+freeze = true
+
+[node name="BBall168" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 0.77392435)
+freeze = true
+
+[node name="BBall169" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, 0.19261408)
+freeze = true
+
+[node name="BBall170" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, 0.19261408)
+freeze = true
+
+[node name="BBall171" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, 0.19261408)
+freeze = true
+
+[node name="BBall172" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, 0.19261408)
+freeze = true
+
+[node name="BBall173" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, 0.19261408)
+freeze = true
+
+[node name="BBall174" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, 0.19261408)
+freeze = true
+
+[node name="BBall175" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, 0.19261408)
+freeze = true
+
+[node name="BBall176" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, 0.19261408)
+freeze = true
+
+[node name="BBall177" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, -0.5634654)
+freeze = true
+
+[node name="BBall178" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, -0.5634654)
+freeze = true
+
+[node name="BBall179" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, -0.5634654)
+freeze = true
+
+[node name="BBall180" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, -0.5634654)
+freeze = true
+
+[node name="BBall181" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, -0.5634654)
+freeze = true
+
+[node name="BBall182" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, -0.5634654)
+freeze = true
+
+[node name="BBall183" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, -0.5634654)
+freeze = true
+
+[node name="BBall184" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, -0.5634654)
+freeze = true
+
+[node name="BBall185" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, -1.1447756)
+freeze = true
+
+[node name="BBall186" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, -1.1447756)
+freeze = true
+
+[node name="BBall187" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, -1.1447756)
+freeze = true
+
+[node name="BBall188" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, -1.1447756)
+freeze = true
+
+[node name="BBall189" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, -1.1447756)
+freeze = true
+
+[node name="BBall190" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, -1.1447756)
+freeze = true
+
+[node name="BBall191" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, -1.1447756)
+freeze = true
+
+[node name="BBall192" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, -1.1447756)
+freeze = true
+
+[node name="BBall193" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, -1.8566762)
+freeze = true
+
+[node name="BBall194" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, -1.8566762)
+freeze = true
+
+[node name="BBall195" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, -1.8566762)
+freeze = true
+
+[node name="BBall196" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, -1.8566762)
+freeze = true
+
+[node name="BBall197" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, -1.8566762)
+freeze = true
+
+[node name="BBall198" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, -1.8566762)
+freeze = true
+
+[node name="BBall199" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, -1.8566762)
+freeze = true
+
+[node name="BBall200" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, -1.8566762)
+freeze = true
+
+[node name="BBall201" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, -2.437986)
+freeze = true
+
+[node name="BBall202" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, -2.437986)
+freeze = true
+
+[node name="BBall203" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, -2.437986)
+freeze = true
+
+[node name="BBall204" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, -2.437986)
+freeze = true
+
+[node name="BBall205" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, -2.437986)
+freeze = true
+
+[node name="BBall206" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, -2.437986)
+freeze = true
+
+[node name="BBall207" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, -2.437986)
+freeze = true
+
+[node name="BBall208" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, -2.437986)
+freeze = true
+
+[node name="BBall209" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, -3.1038718)
+freeze = true
+
+[node name="BBall210" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, -3.1038718)
+freeze = true
+
+[node name="BBall211" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, -3.1038718)
+freeze = true
+
+[node name="BBall212" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, -3.1038718)
+freeze = true
+
+[node name="BBall213" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, -3.1038718)
+freeze = true
+
+[node name="BBall214" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, -3.1038718)
+freeze = true
+
+[node name="BBall215" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, -3.1038718)
+freeze = true
+
+[node name="BBall216" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, -3.1038718)
+freeze = true
+
+[node name="BBall217" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, -3.6851816)
+freeze = true
+
+[node name="BBall218" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, -3.6851816)
+freeze = true
+
+[node name="BBall219" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, -3.6851816)
+freeze = true
+
+[node name="BBall220" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, -3.6851816)
+freeze = true
+
+[node name="BBall221" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, -3.6851816)
+freeze = true
+
+[node name="BBall222" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, -3.6851816)
+freeze = true
+
+[node name="BBall223" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, -3.6851816)
+freeze = true
+
+[node name="BBall224" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, -3.6851816)
+freeze = true
+
+[node name="BBall225" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, -4.29319)
+freeze = true
+
+[node name="BBall226" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, -4.29319)
+freeze = true
+
+[node name="BBall227" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, -4.29319)
+freeze = true
+
+[node name="BBall228" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, -4.29319)
+freeze = true
+
+[node name="BBall229" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, -4.29319)
+freeze = true
+
+[node name="BBall230" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, -4.29319)
+freeze = true
+
+[node name="BBall231" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, -4.29319)
+freeze = true
+
+[node name="BBall232" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, -4.29319)
+freeze = true
+
+[node name="BBall233" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, -4.8745)
+freeze = true
+
+[node name="BBall234" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, -4.8745)
+freeze = true
+
+[node name="BBall235" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, -4.8745)
+freeze = true
+
+[node name="BBall236" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, -4.8745)
+freeze = true
+
+[node name="BBall237" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, -4.8745)
+freeze = true
+
+[node name="BBall238" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, -4.8745)
+freeze = true
+
+[node name="BBall239" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, -4.8745)
+freeze = true
+
+[node name="BBall240" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, -4.8745)
+freeze = true
+
+[node name="BBall241" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, -5.554703)
+freeze = true
+
+[node name="BBall242" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, -5.554703)
+freeze = true
+
+[node name="BBall243" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, -5.554703)
+freeze = true
+
+[node name="BBall244" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, -5.554703)
+freeze = true
+
+[node name="BBall245" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, -5.554703)
+freeze = true
+
+[node name="BBall246" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, -5.554703)
+freeze = true
+
+[node name="BBall247" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, -5.554703)
+freeze = true
+
+[node name="BBall248" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, -5.554703)
+freeze = true
+
+[node name="BBall249" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -2.6615667, -6.136013)
+freeze = true
+
+[node name="BBall250" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -2.6615667, -6.136013)
+freeze = true
+
+[node name="BBall251" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.142466, -3.488174, -6.136013)
+freeze = true
+
+[node name="BBall252" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.24027258, -3.488174, -6.136013)
+freeze = true
+
+[node name="BBall253" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -2.6615667, -6.136013)
+freeze = true
+
+[node name="BBall254" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -2.6615667, -6.136013)
+freeze = true
+
+[node name="BBall255" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.5878985, -3.488174, -6.136013)
+freeze = true
+
+[node name="BBall256" parent="." instance=ExtResource("2_ep08x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4577005, -3.488174, -6.136013)
+freeze = true

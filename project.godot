@@ -11,12 +11,16 @@ config_version=5
 [application]
 
 config/name="Shader"
-run/main_scene="uid://cyn415x7dblc2"
+run/main_scene="uid://cm7xtkx4yvvq2"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
 [autoload]
 
-Global="*res://Scripts/global.gd"
+Global="*res://Scenes/AdminScenes/global.gd"
+GameManager="*res://Scenes/ManagerScenes/game_manager.gd"
+SceneManager="*res://Scenes/ManagerScenes/scene_manager.gd"
+SettingsManager="*res://Scenes/ManagerScenes/settings_manager.gd"
+AudioManager="*res://Scenes/ManagerScenes/audio_manager.gd"
 
 [global_group]
 

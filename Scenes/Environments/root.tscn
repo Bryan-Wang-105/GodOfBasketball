@@ -1,9 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://cupudkfdjm8qu"]
-
-[ext_resource type="PackedScene" uid="uid://cyn415x7dblc2" path="res://Scenes/Environments/world.tscn" id="1_i04dx"]
-
-[node name="Root" type="Node" unique_id=426674133]
-
-[node name="CurrentScene" type="Node" parent="." unique_id=1812064484]
-
-[node name="World" parent="CurrentScene" unique_id=174493226 instance=ExtResource("1_i04dx")]
