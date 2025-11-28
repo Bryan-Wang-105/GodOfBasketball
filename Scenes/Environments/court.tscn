@@ -191,6 +191,7 @@ material = SubResource("StandardMaterial3D_acrlw")
 libraries = {
 &"": SubResource("AnimationLibrary_bq33w")
 }
+autoplay = "OpenRoof"
 
 [node name="Roof1" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.44339, 29.968105, 0.3910923)

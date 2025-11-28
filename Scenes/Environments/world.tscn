@@ -1,11 +1,14 @@
-[gd_scene load_steps=10 format=3 uid="uid://cyn415x7dblc2"]
+[gd_scene load_steps=13 format=3 uid="uid://cyn415x7dblc2"]
 
 [ext_resource type="PackedScene" uid="uid://bmg8jl8p8bocm" path="res://Scenes/Ball/b_ball.tscn" id="1_xw17x"]
-[ext_resource type="PackedScene" uid="uid://qhoj3xjipgb7" path="res://Scenes/Environments/court.tscn" id="2_dsxl4"]
 [ext_resource type="PackedScene" uid="uid://ja13r6fvdujc" path="res://Scenes/Player/player.tscn" id="3_gfun1"]
 [ext_resource type="Script" uid="uid://bgxtx1qndrtqy" path="res://Scenes/Player/HUD.gd" id="4_qrt73"]
 [ext_resource type="PackedScene" uid="uid://bowc0gmynfbn7" path="res://Scenes/Spawnables/Lift/Lift.tscn" id="5_dsxl4"]
 [ext_resource type="PackedScene" uid="uid://ba2tkcvat420p" path="res://Scenes/Spawnables/Duplicator/Duplicator.tscn" id="5_gfun1"]
+[ext_resource type="PackedScene" uid="uid://c0u8jliho48or" path="res://Scenes/Spawnables/Fan/fan.tscn" id="6_qrt73"]
+[ext_resource type="PackedScene" uid="uid://bh6kpwjjqokht" path="res://Scenes/Sheldon/sheldon.tscn" id="7_ceujy"]
+[ext_resource type="PackedScene" uid="uid://bjydbwomqd7gc" path="res://Scenes/Land/land.tscn" id="7_up587"]
+[ext_resource type="PackedScene" uid="uid://c41h38t8h115r" path="res://Scenes/Sheldon/UI/shop.tscn" id="9_up587"]
 
 [sub_resource type="Animation" id="Animation_fo5ed"]
 length = 1.25
@@ -40,17 +43,22 @@ render_target_update_mode = 4
 transform = Transform3D(0.012513744, 0, -0.9999217, 0, 1, 0, 0.9999217, 0, 0.012513744, 1.7409992, 5.1391582, 0.17250586)
 
 [node name="BBall" parent="SubViewportContainer/SubViewport" instance=ExtResource("1_xw17x")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5668736, 15.305651, 0.14646727)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.99722, 7.7519417, 0.14646727)
 collision_mask = 7
-
-[node name="Court" parent="SubViewportContainer/SubViewport" instance=ExtResource("2_dsxl4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0070209503, 0.07970238, -0.023334503)
 
 [node name="player" parent="SubViewportContainer/SubViewport" instance=ExtResource("3_gfun1")]
 transform = Transform3D(0.008743965, 0, 0.9999618, 0, 1, 0, -0.9999618, 0, 0.008743965, 6.686322, 5.6243286, 1.1341481)
 
 [node name="Duplicator" parent="SubViewportContainer/SubViewport" instance=ExtResource("5_gfun1")]
-transform = Transform3D(0.057407226, 0, 0.99835086, 0, 1, 0, -0.99835086, 0, 0.057407226, -6.0813065, 6.3310137, -0.51640415)
+transform = Transform3D(0.057407226, 0, 0.99835086, 0, 1, 0, -0.99835086, 0, 0.057407226, 3.6389532, 6.31797, 0.39515126)
+
+[node name="Fan" parent="SubViewportContainer/SubViewport" instance=ExtResource("6_qrt73")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0375643, 4.949676, -3.0134807)
+
+[node name="Sheldon" parent="SubViewportContainer/SubViewport" instance=ExtResource("7_ceujy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.517945, 5.1391587, 15.031624)
+
+[node name="Land" parent="SubViewportContainer/SubViewport" instance=ExtResource("7_up587")]
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -106,3 +114,33 @@ vertical_alignment = 1
 libraries = {
 &"": SubResource("AnimationLibrary_5ukr8")
 }
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+visible = false
+custom_minimum_size = Vector2(800, 500)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -250.0
+offset_right = 400.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Shop" parent="CanvasLayer/Control" instance=ExtResource("9_up587")]
+layout_mode = 1
+anchors_preset = 15
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 0.0
+offset_bottom = 0.0

@@ -19,6 +19,7 @@ func _ready() -> void:
 	bottom_area.body_entered.connect(_on_bottom_area_entered)
 	#bottom_area.body_exited.connect(_on_bottom_area_exited)
 
+
 func _on_top_area_entered(body: Node3D) -> void:
 	if body.is_in_group("ball"):
 		# Ball entered from top

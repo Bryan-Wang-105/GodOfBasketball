@@ -3,6 +3,7 @@ extends Node
 var HUD
 var ball
 var player
+var land
 
 var ball_arr = []
 var ball_limit = 1000

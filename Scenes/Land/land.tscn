@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjydbwomqd7gc"]
+
+[ext_resource type="Texture2D" uid="uid://bnid268jm5rbe" path="res://Assets/Textures/grid.png" id="1_4yinq"]
+[ext_resource type="Script" uid="uid://mfsw40djffgw" path="res://Scenes/Land/land.gd" id="1_hy0hd"]
+[ext_resource type="PackedScene" uid="uid://qhoj3xjipgb7" path="res://Scenes/Environments/court.tscn" id="2_o74wx"]
+[ext_resource type="PackedScene" uid="uid://cp4xhnia4k1i" path="res://Scenes/Spawnables/Plane/plane.tscn" id="3_neu6e"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_o74wx"]
+albedo_texture = ExtResource("1_4yinq")
+uv1_triplanar = true
+
+[node name="Land" type="Node3D"]
+script = ExtResource("1_hy0hd")
+
+[node name="CSGBox3D" type="CSGBox3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.4664917)
+use_collision = true
+size = Vector3(1000, 0.4, 1000)
+material = SubResource("StandardMaterial3D_o74wx")
+
+[node name="Court" parent="." instance=ExtResource("2_o74wx")]
+
+[node name="Plane" parent="." instance=ExtResource("3_neu6e")]
+transform = Transform3D(1, 0, 0, 0, 0.999345, -0.03619024, 0, 0.03619024, 0.999345, -547.4674, 74.307724, 0.8942375)
+
+[node name="MainCam" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.9396926, 0.34202012, 0, -0.34202012, 0.9396926, -547.01135, 91.53388, 34.46946)

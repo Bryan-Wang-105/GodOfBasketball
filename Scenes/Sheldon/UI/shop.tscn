@@ -1,0 +1,142 @@
+[gd_scene load_steps=6 format=3 uid="uid://c41h38t8h115r"]
+
+[ext_resource type="PackedScene" uid="uid://j2yo41fkdpwn" path="res://Scenes/Sheldon/UI/slot.tscn" id="1_njiqp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ijak5"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u8dju"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_njiqp"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_v104d"]
+bg_color = Color(0, 0, 0, 1)
+
+[node name="Shop" type="Panel"]
+modulate = Color(0.15487596, 0.154876, 0.15487596, 0.29803923)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -431.0
+offset_top = -232.0
+offset_right = 428.0
+offset_bottom = 247.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ijak5")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_u8dju")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HBoxContainer/PanelContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_njiqp")
+theme_override_styles/focus = SubResource("StyleBoxFlat_v104d")
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/h_separation = 30
+theme_override_constants/v_separation = 30
+columns = 3
+
+[node name="Slot" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot2" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot3" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot4" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot5" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot6" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot7" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot8" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot9" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot10" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot11" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot12" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot13" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot14" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot15" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot16" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot17" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+
+[node name="Slot18" parent="MarginContainer/HBoxContainer/PanelContainer/ScrollContainer/MarginContainer/GridContainer" instance=ExtResource("1_njiqp")]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2

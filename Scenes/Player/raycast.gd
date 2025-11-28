@@ -27,7 +27,8 @@ func _process(delta: float) -> void:
 		
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
-		result.interact()
+		if result:
+			result.interact()
 	
 	elif event.is_action_pressed("l_click"):
 		if result and result.is_in_group("ball"):

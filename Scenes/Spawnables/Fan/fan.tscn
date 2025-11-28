@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0u8jliho48or"]
+
+[ext_resource type="Script" uid="uid://duwmco51o7qxs" path="res://Scenes/Spawnables/Fan/fan.gd" id="1_rqwqt"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_evcor"]
+height = 1.4436035
+radius = 0.44189453
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_5m5s1"]
+emission_shape = 1
+emission_sphere_radius = 1.0
+gravity = Vector3(0, 10, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xcws6"]
+transparency = 1
+cull_mode = 2
+albedo_color = Color(0.69803923, 0.5411765, 0.9019608, 0.42352942)
+
+[sub_resource type="QuadMesh" id="QuadMesh_8gnqs"]
+material = SubResource("StandardMaterial3D_xcws6")
+size = Vector2(0.25, 0.5)
+
+[node name="Fan" type="StaticBody3D"]
+script = ExtResource("1_rqwqt")
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, -0.008578956, 0)
+use_collision = true
+radius = 1.0
+height = 0.2
+
+[node name="Area3D" type="Area3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1.9512302, 0, -0.43897727, 0, 2, 0, 0.43897727, 0, 1.9512302, 0, 1.5612562, 0)
+shape = SubResource("CylinderShape3D_evcor")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0.9598996, 0)
+amount = 30
+lifetime = 0.85
+process_material = SubResource("ParticleProcessMaterial_5m5s1")
+draw_pass_1 = SubResource("QuadMesh_8gnqs")
+
+[node name="GPUParticles3D2" type="GPUParticles3D" parent="."]
+transform = Transform3D(0.010297404, 0, -1.9999735, 0, 2, 0, 1.9999735, 0, 0.010297404, 0, 0.9598996, 0)
+amount = 30
+lifetime = 0.85
+process_material = SubResource("ParticleProcessMaterial_5m5s1")
+draw_pass_1 = SubResource("QuadMesh_8gnqs")

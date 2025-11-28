@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ja13r6fvdujc"]
+[gd_scene load_steps=6 format=3 uid="uid://ja13r6fvdujc"]
 
 [ext_resource type="Script" uid="uid://l7g3xpqcjh1d" path="res://Scenes/Player/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://ch8cf86ydleay" path="res://Scenes/Player/raycast.gd" id="2_a3d8c"]
+[ext_resource type="Script" uid="uid://bamfn60covnpv" path="res://Scenes/Player/tool_selector.gd" id="3_xpcdj"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_cjd0b"]
 
@@ -31,9 +32,12 @@ spring_length = 12.0
 
 [node name="RayCast3D" type="RayCast3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.1920929e-07, 0.10881698, 0)
-target_position = Vector3(0, 0, -1.5)
+target_position = Vector3(0, 0, -2.5)
 collision_mask = 16
 script = ExtResource("2_a3d8c")
 
 [node name="HoldPos" type="Node3D" parent="Head"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.091092706, -1.6831865)
+
+[node name="ToolSelector" type="Node" parent="."]
+script = ExtResource("3_xpcdj")
