@@ -60,9 +60,10 @@ func spawn_duplicate_delayed(original: RigidBody3D, entry_data: Dictionary) -> v
 	
 	var duplicate
 	
-	# Create duplicate
-	if len(Global.ball_arr) == Global.ball_limit:
-		duplicate = Global.get_next_ball()
+	# Reuse ball from object pool if we are at limit
+	if len(BallManager.ball_arr) == BallManager.ball_limit:
+		duplicate = BallManager.get_next_ball()
+	# Duplicate the ball that went in
 	else:
 		duplicate = original.duplicate(DUPLICATE_USE_INSTANTIATION)
 		
@@ -73,6 +74,7 @@ func spawn_duplicate_delayed(original: RigidBody3D, entry_data: Dictionary) -> v
 	duplicate.global_rotation = entry_data.rotation
 	
 	# Copy physics properties
+	duplicate.freeze = false
 	duplicate.mass = original.mass
 	duplicate.physics_material_override = original.physics_material_override
 	duplicate.gravity_scale = original.gravity_scale
@@ -87,4 +89,4 @@ func spawn_duplicate_delayed(original: RigidBody3D, entry_data: Dictionary) -> v
 		duplicate.linear_velocity = entry_data.linear_velocity * velocity_multiplier
 		duplicate.angular_velocity = entry_data.angular_velocity * velocity_multiplier
 	
-	print("Duplicated ", original.name, " at entry point after ", spawn_delay, " seconds")
+	#print("Duplicated ", original.name, " at entry point after ", spawn_delay, " seconds")

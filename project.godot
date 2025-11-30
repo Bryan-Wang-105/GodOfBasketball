@@ -10,7 +10,8 @@ config_version=5
 
 [application]
 
-config/name="Shader"
+config/name="BALLER"
+config/description="Everything you could ever want from life is just one shot away. Use and unlock a wide array of outrageous means from portals, bombers, and blackholes to cement your spot on the basketball team in the fastest time possible!"
 run/main_scene="uid://cm7xtkx4yvvq2"
 config/features=PackedStringArray("4.6", "Forward Plus")
 
@@ -21,6 +22,7 @@ GameManager="*res://Scenes/ManagerScenes/game_manager.gd"
 SceneManager="*res://Scenes/ManagerScenes/scene_manager.gd"
 SettingsManager="*res://Scenes/ManagerScenes/settings_manager.gd"
 AudioManager="*res://Scenes/ManagerScenes/audio_manager.gd"
+BallManager="*res://Scenes/ManagerScenes/ball_manager.gd"
 
 [global_group]
 

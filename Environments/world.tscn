@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bmg8jl8p8bocm" path="res://PlayerTools/Ball/b_ball.tscn" id="1_xw17x"]
 [ext_resource type="PackedScene" uid="uid://ja13r6fvdujc" path="res://Scenes/Player/player.tscn" id="3_gfun1"]
-[ext_resource type="Script" uid="uid://bgxtx1qndrtqy" path="res://Scenes/Player/HUD.gd" id="4_qrt73"]
+[ext_resource type="Script" uid="uid://bgxtx1qndrtqy" path="res://Scenes/Player/UI/HUD.gd" id="4_qrt73"]
 [ext_resource type="PackedScene" uid="uid://bowc0gmynfbn7" path="res://PlayerTools/Lift/Lift.tscn" id="5_dsxl4"]
 [ext_resource type="PackedScene" uid="uid://ba2tkcvat420p" path="res://PlayerTools/Duplicator/Duplicator.tscn" id="5_gfun1"]
 [ext_resource type="PackedScene" uid="uid://c0u8jliho48or" path="res://PlayerTools/Fan/fan.tscn" id="6_qrt73"]
@@ -51,6 +51,12 @@ transform = Transform3D(0.008743965, 0, 0.9999618, 0, 1, 0, -0.9999618, 0, 0.008
 
 [node name="Duplicator" parent="SubViewportContainer/SubViewport" instance=ExtResource("5_gfun1")]
 transform = Transform3D(0.057407226, 0, 0.99835086, 0, 1, 0, -0.99835086, 0, 0.057407226, 3.6389532, 6.31797, 0.39515126)
+
+[node name="Duplicator2" parent="SubViewportContainer/SubViewport" instance=ExtResource("5_gfun1")]
+transform = Transform3D(0.057407226, 0, 0.99835086, 0, 1, 0, -0.99835086, 0, 0.057407226, -0.35527635, 7.26273, 0.39515126)
+
+[node name="Duplicator3" parent="SubViewportContainer/SubViewport" instance=ExtResource("5_gfun1")]
+transform = Transform3D(0.057407226, 0, 0.99835086, 0, 1, 0, -0.99835086, 0, 0.057407226, 7.7894306, 6.271337, 0.39515126)
 
 [node name="Fan" parent="SubViewportContainer/SubViewport" instance=ExtResource("6_qrt73")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0375643, 4.949676, -3.0134807)

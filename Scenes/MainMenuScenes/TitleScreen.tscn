@@ -341,7 +341,7 @@ libraries = {
 autoplay = "title_fade_in"
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.5463481, 0.19076395, 0.8155444, -0.026182229, 0.9693508, -0.24428084, -0.83714855, -0.15481515, -0.52460855, 56.5662, 2.19509, -34.3213)
+transform = Transform3D(-0.546348, 0.19076392, 0.8155444, -0.026182223, 0.96935064, -0.24428084, -0.83714837, -0.15481512, -0.52460855, 56.5662, 2.19509, -34.3213)
 fov = 57.5
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -368,7 +368,7 @@ offset_bottom = 11.1667
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 64
-text = "PROTOTYPE GAME"
+text = "BASKETBALL GOD"
 
 [node name="VersionID" type="Label" parent="CanvasLayer/Control/Title"]
 layout_mode = 1
@@ -383,7 +383,7 @@ offset_right = 64.0
 offset_bottom = 69.0
 grow_horizontal = 2
 grow_vertical = 2
-text = "Version 1.0"
+text = "Version 1.0 - Click to continue"
 horizontal_alignment = 1
 
 [node name="OptionsVbox" type="VBoxContainer" parent="CanvasLayer/Control"]
@@ -394,10 +394,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -120.0
-offset_top = 38.0
-offset_right = 123.0
-offset_bottom = 226.0
+offset_left = -179.5
+offset_top = 73.0
+offset_right = 179.5
+offset_bottom = 270.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 20

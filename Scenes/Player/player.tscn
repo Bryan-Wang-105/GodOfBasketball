@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://ja13r6fvdujc"]
+[gd_scene load_steps=7 format=3 uid="uid://ja13r6fvdujc"]
 
 [ext_resource type="Script" uid="uid://l7g3xpqcjh1d" path="res://Scenes/Player/player.gd" id="1_v0iea"]
 [ext_resource type="Script" uid="uid://ch8cf86ydleay" path="res://Scenes/Player/raycast.gd" id="2_a3d8c"]
 [ext_resource type="Script" uid="uid://bamfn60covnpv" path="res://Scenes/Player/tool_selector.gd" id="3_xpcdj"]
+[ext_resource type="PackedScene" uid="uid://0w5b5lk4mahu" path="res://Scenes/Player/UI/hotbar.tscn" id="4_mtuoh"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_cjd0b"]
 
@@ -41,3 +42,27 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.091092706, -1.6831865)
 
 [node name="ToolSelector" type="Node" parent="."]
 script = ExtResource("3_xpcdj")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Hotbar" parent="CanvasLayer/Control" instance=ExtResource("4_mtuoh")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -233.5
+offset_top = -169.0
+offset_right = 233.5
+offset_bottom = -17.0
+grow_horizontal = 2
+grow_vertical = 0

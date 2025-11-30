@@ -98,6 +98,11 @@ func _on_quit_button_pressed():
 
 func _to_world():
 	# Change scene to world
+	print("ball array length")
+	print(len(BallManager.ball_arr))
+	BallManager.reset_ball_array()
+	print("ball array length after reset")
+	print(len(BallManager.ball_arr))
 	GameManager.change_scene("res://Environments/world.tscn")
 
 func cleanup():

@@ -10,7 +10,7 @@ func get_prompt():
 	return prompt
 
 func interact():
-	var ball = Global.ball
+	var ball = BallManager.ball
 
 	# Freeze the body so physics won't fight you
 	ball.freeze = true
