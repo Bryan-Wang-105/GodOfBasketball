@@ -24,6 +24,13 @@ SettingsManager="*res://Scenes/ManagerScenes/settings_manager.gd"
 AudioManager="*res://Scenes/ManagerScenes/audio_manager.gd"
 BallManager="*res://Scenes/ManagerScenes/ball_manager.gd"
 
+[display]
+
+window/size/viewport_width=1900
+window/size/viewport_height=1000
+window/stretch/mode="viewport"
+window/stretch/aspect="expand"
+
 [global_group]
 
 ball=""

@@ -1,11 +1,18 @@
 extends Node
 
-@onready var hotbar: PanelContainer = $"../CanvasLayer/Control/Hotbar"
+@onready var hotbar: PanelContainer = $"../CanvasLayer/Control/MarginContainer/Control/Hotbar"
 
 var tools = [null, null, null, null]
 var active_index = 0
 
+func _ready():
+	Global.tool_selector = self
+
 func change_index(index):
+	# Drop ball if switching tools
+	if active_index == 0 and index != 0:
+		BallManager.drop_ball()
+		
 	active_index = index
 	hotbar.change_slot(index)
 

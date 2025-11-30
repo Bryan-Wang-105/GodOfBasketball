@@ -1,7 +1,8 @@
 extends Control
-@onready var fps: Label = $FPS
-@onready var timer: Label = $Timer
-@onready var prompt: Label = $Prompt
+
+@onready var fps: Label = $MarginContainer/Control/FPS
+@onready var timer: Label = $MarginContainer/Control/Timer
+@onready var prompt: Label = $MarginContainer/Control/Prompt
 
 @onready var anim: AnimationPlayer = $AnimationPlayer
 
@@ -37,7 +38,7 @@ func _process(delta):
 		var seconds = int(elapsed_time) % 60
 		var centi_seconds = int((elapsed_time - int(elapsed_time)) * 100)
 		
-		timer.text = "%02d:%02d:%02d:%01d" % [hours, minutes, seconds, centi_seconds]
+		timer.text = "%02d:%02d:%02d:%02d" % [hours, minutes, seconds, centi_seconds]
 
 
 func stop_clock():
