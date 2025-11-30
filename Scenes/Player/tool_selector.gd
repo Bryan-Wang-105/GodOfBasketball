@@ -13,8 +13,8 @@ func change_index(index):
 	if active_index == 0 and index != 0:
 		BallManager.drop_ball()
 		
+	hotbar.change_slot(active_index, index)
 	active_index = index
-	hotbar.change_slot(index)
 
 func active_tool():
 	tools[active_index].activate()
